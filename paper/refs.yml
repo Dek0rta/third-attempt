@@ -1,0 +1,143 @@
+darragh2026:
+  type: article
+  title: Predicting a Successful Attempt in Raw Powerlifting. A Nonlinear Mixed Logistic Regression Analysis
+  author: ["Darragh, Ian A. J.", "Egan, Brendan", "Nolan, David", "Bennett, Kevin E."]
+  date: 2026
+  page-range: e138-e146
+  serial-number:
+    doi: 10.1519/JSC.0000000000005276
+  parent:
+    type: periodical
+    title: Journal of Strength and Conditioning Research
+    volume: 40
+    issue: 2
+
+vandenhoek2022:
+  type: article
+  title: What are the odds? Identifying factors related to competitive success in powerlifting
+  author: [{name: "Hoek", prefix: "van den", given-name: "D. J."}, "Owen, P. J.", "Garrett, J. M.", "Howells, R. J.", "Pearson, J.", "Spathis, J. G.", "Latella, C."]
+  date: 2022
+  page-range: "110"
+  serial-number:
+    doi: 10.1186/s13102-022-00505-2
+  parent:
+    type: periodical
+    title: BMC Sports Science, Medicine and Rehabilitation
+    volume: 14
+
+howells2022:
+  type: article
+  title: Impacts of squat attempt weight selection and success on powerlifting performance
+  author: ["Howells, R. J.", "Spathis, J. G.", "Pearson, J.", "Latella, C.", "Garrett, J. M.", "Owen, P. J.", {name: "Hoek", prefix: "van den", given-name: "D. J."}]
+  date: 2022
+  page-range: 476-484
+  serial-number:
+    doi: 10.23736/S0022-4707.21.12140-1
+  parent:
+    type: periodical
+    title: The Journal of Sports Medicine and Physical Fitness
+    volume: 62
+    issue: 4
+
+travis2021:
+  type: article
+  title: Weight Selection Attempts of Elite Classic Powerlifters
+  author: ["Travis, S. Kyle", "Zourdos, Michael C.", "Bazyler, Caleb D."]
+  date: 2021
+  page-range: 507-521
+  serial-number:
+    doi: 10.1177/0031512520967608
+  parent:
+    type: periodical
+    title: Perceptual and Motor Skills
+    volume: 128
+    issue: 1
+
+nishihata2024:
+  type: article
+  title: Reference Points, Risk-Taking Behavior, and Competitive Outcomes in Sequential Settings
+  author: ["Nishihata, M.", "Otani, S."]
+  date: 2024
+  serial-number:
+    doi: 10.48550/arXiv.2409.13333
+  parent:
+    type: repository
+    title: arXiv preprint 2409.13333
+
+genakos2012:
+  type: article
+  title: Interim Rank, Risk Taking, and Performance in Dynamic Tournaments
+  author: ["Genakos, Christos", "Pagliero, Mario"]
+  date: 2012
+  page-range: 782-813
+  parent:
+    type: periodical
+    title: Journal of Political Economy
+    volume: 120
+    issue: 4
+
+manski1997:
+  type: article
+  title: Monotone Treatment Response
+  author: ["Manski, Charles F."]
+  date: 1997
+  page-range: 1311-1334
+  parent:
+    type: periodical
+    title: Econometrica
+    volume: 65
+    issue: 6
+
+manski2000:
+  type: article
+  title: "Identification problems and decisions under ambiguity: Empirical analysis of treatment response and normative analysis of treatment choice"
+  author: ["Manski, Charles F."]
+  date: 2000
+  page-range: 415-442
+  parent:
+    type: periodical
+    title: Journal of Econometrics
+    volume: 95
+    issue: 2
+
+gilovich1985:
+  type: article
+  title: "The hot hand in basketball: On the misperception of random sequences"
+  author: ["Gilovich, Thomas", "Vallone, Robert", "Tversky, Amos"]
+  date: 1985
+  page-range: 295-314
+  parent:
+    type: periodical
+    title: Cognitive Psychology
+    volume: 17
+    issue: 3
+
+bareli2006:
+  type: article
+  title: "Twenty years of “hot hand” research: Review and critique"
+  author: ["Bar-Eli, Michael", "Avugos, Simcha", "Raab, Markus"]
+  date: 2006
+  page-range: 525-553
+  parent:
+    type: periodical
+    title: Psychology of Sport and Exercise
+    volume: 7
+    issue: 6
+
+miller2018:
+  type: article
+  title: "Surprised by the Hot Hand Fallacy? A Truth in the Law of Small Numbers"
+  author: ["Miller, Joshua B.", "Sanjurjo, Adam"]
+  date: 2018
+  page-range: 2019-2047
+  parent:
+    type: periodical
+    title: Econometrica
+    volume: 86
+    issue: 6
+
+opl:
+  type: misc
+  title: "OpenPowerlifting: a public-domain archive of powerlifting history. Data snapshot of 10 October 2026"
+  date: 2026
+  url: https://www.openpowerlifting.org

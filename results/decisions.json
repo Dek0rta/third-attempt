@@ -1,0 +1,487 @@
+{
+  "third_attempt": [
+    {
+      "lift": "Squat",
+      "n": 814888,
+      "maximin_jump_bin": "3.5-4.5",
+      "maximin_gain_pct_lo": 1.962,
+      "observed_gain_pct_peak_bin": "13.0-15.0",
+      "naive_model_best_jump": 15.0
+    },
+    {
+      "lift": "Bench",
+      "n": 1123427,
+      "maximin_jump_bin": "3.5-4.5",
+      "maximin_gain_pct_lo": 1.301,
+      "observed_gain_pct_peak_bin": "13.0-15.0",
+      "naive_model_best_jump": 15.0
+    },
+    {
+      "lift": "Deadlift",
+      "n": 1028895,
+      "maximin_jump_bin": "3.5-4.5",
+      "maximin_gain_pct_lo": 1.913,
+      "observed_gain_pct_peak_bin": "13.0-15.0",
+      "naive_model_best_jump": 15.0
+    }
+  ],
+  "third_attempt_bounds": [
+    {
+      "lift": "Squat",
+      "jump_mid": 0.75,
+      "share": 0.0208,
+      "made_observed": 0.5295,
+      "p_lo": 0.6759,
+      "p_hi": 0.9902,
+      "gain_pct_lo": 0.5069,
+      "gain_pct_hi": 0.7426
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 2.0,
+      "share": 0.1001,
+      "made_observed": 0.6115,
+      "p_lo": 0.6648,
+      "p_hi": 0.9513,
+      "gain_pct_lo": 1.3297,
+      "gain_pct_hi": 1.9026
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 3.0,
+      "share": 0.171,
+      "made_observed": 0.6618,
+      "p_lo": 0.6036,
+      "p_hi": 0.8935,
+      "gain_pct_lo": 1.8108,
+      "gain_pct_hi": 2.6804
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 4.0,
+      "share": 0.1989,
+      "made_observed": 0.6897,
+      "p_lo": 0.4904,
+      "p_hi": 0.8317,
+      "gain_pct_lo": 1.9617,
+      "gain_pct_hi": 3.3269
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 5.0,
+      "share": 0.1794,
+      "made_observed": 0.6988,
+      "p_lo": 0.3532,
+      "p_hi": 0.7777,
+      "gain_pct_lo": 1.7661,
+      "gain_pct_hi": 3.8885
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 6.0,
+      "share": 0.1202,
+      "made_observed": 0.6992,
+      "p_lo": 0.2279,
+      "p_hi": 0.7416,
+      "gain_pct_lo": 1.3672,
+      "gain_pct_hi": 4.4494
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 7.0,
+      "share": 0.0737,
+      "made_observed": 0.6961,
+      "p_lo": 0.1438,
+      "p_hi": 0.7192,
+      "gain_pct_lo": 1.0069,
+      "gain_pct_hi": 5.0341
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 8.25,
+      "share": 0.065,
+      "made_observed": 0.6883,
+      "p_lo": 0.0925,
+      "p_hi": 0.6989,
+      "gain_pct_lo": 0.7633,
+      "gain_pct_hi": 5.7659
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 10.0,
+      "share": 0.0418,
+      "made_observed": 0.6818,
+      "p_lo": 0.0478,
+      "p_hi": 0.6856,
+      "gain_pct_lo": 0.4781,
+      "gain_pct_hi": 6.8561
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 12.0,
+      "share": 0.0199,
+      "made_observed": 0.666,
+      "p_lo": 0.0193,
+      "p_hi": 0.679,
+      "gain_pct_lo": 0.232,
+      "gain_pct_hi": 8.1475
+    },
+    {
+      "lift": "Squat",
+      "jump_mid": 14.0,
+      "share": 0.0092,
+      "made_observed": 0.662,
+      "p_lo": 0.0061,
+      "p_hi": 0.6759,
+      "gain_pct_lo": 0.085,
+      "gain_pct_hi": 9.462
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 0.75,
+      "share": 0.0219,
+      "made_observed": 0.5131,
+      "p_lo": 0.4953,
+      "p_hi": 0.9893,
+      "gain_pct_lo": 0.3715,
+      "gain_pct_hi": 0.742
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 2.0,
+      "share": 0.1225,
+      "made_observed": 0.5119,
+      "p_lo": 0.4841,
+      "p_hi": 0.9296,
+      "gain_pct_lo": 0.9682,
+      "gain_pct_hi": 1.8591
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 3.0,
+      "share": 0.1852,
+      "made_observed": 0.5197,
+      "p_lo": 0.4214,
+      "p_hi": 0.8406,
+      "gain_pct_lo": 1.2642,
+      "gain_pct_hi": 2.5218
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 4.0,
+      "share": 0.2103,
+      "made_observed": 0.517,
+      "p_lo": 0.3252,
+      "p_hi": 0.739,
+      "gain_pct_lo": 1.3006,
+      "gain_pct_hi": 2.9561
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 5.0,
+      "share": 0.1538,
+      "made_observed": 0.5013,
+      "p_lo": 0.2164,
+      "p_hi": 0.6623,
+      "gain_pct_lo": 1.0821,
+      "gain_pct_hi": 3.3115
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 6.0,
+      "share": 0.1025,
+      "made_observed": 0.4855,
+      "p_lo": 0.1393,
+      "p_hi": 0.6096,
+      "gain_pct_lo": 0.8359,
+      "gain_pct_hi": 3.6575
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 7.0,
+      "share": 0.0667,
+      "made_observed": 0.4792,
+      "p_lo": 0.0896,
+      "p_hi": 0.5748,
+      "gain_pct_lo": 0.627,
+      "gain_pct_hi": 4.0238
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 8.25,
+      "share": 0.0619,
+      "made_observed": 0.4435,
+      "p_lo": 0.0576,
+      "p_hi": 0.5404,
+      "gain_pct_lo": 0.4751,
+      "gain_pct_hi": 4.4583
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 10.0,
+      "share": 0.0434,
+      "made_observed": 0.4139,
+      "p_lo": 0.0302,
+      "p_hi": 0.515,
+      "gain_pct_lo": 0.3015,
+      "gain_pct_hi": 5.1496
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 12.0,
+      "share": 0.0224,
+      "made_observed": 0.3836,
+      "p_lo": 0.0122,
+      "p_hi": 0.5012,
+      "gain_pct_lo": 0.1463,
+      "gain_pct_hi": 6.0141
+    },
+    {
+      "lift": "Bench",
+      "jump_mid": 14.0,
+      "share": 0.0094,
+      "made_observed": 0.3826,
+      "p_lo": 0.0036,
+      "p_hi": 0.4953,
+      "gain_pct_lo": 0.0506,
+      "gain_pct_hi": 6.9349
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 0.75,
+      "share": 0.0224,
+      "made_observed": 0.4834,
+      "p_lo": 0.6303,
+      "p_hi": 0.9884,
+      "gain_pct_lo": 0.4727,
+      "gain_pct_hi": 0.7413
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 2.0,
+      "share": 0.0983,
+      "made_observed": 0.541,
+      "p_lo": 0.6195,
+      "p_hi": 0.9433,
+      "gain_pct_lo": 1.2389,
+      "gain_pct_hi": 1.8866
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 3.0,
+      "share": 0.1477,
+      "made_observed": 0.5954,
+      "p_lo": 0.5663,
+      "p_hi": 0.8835,
+      "gain_pct_lo": 1.6988,
+      "gain_pct_hi": 2.6505
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 4.0,
+      "share": 0.191,
+      "made_observed": 0.6343,
+      "p_lo": 0.4783,
+      "p_hi": 0.8137,
+      "gain_pct_lo": 1.9132,
+      "gain_pct_hi": 3.2546
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 5.0,
+      "share": 0.1746,
+      "made_observed": 0.655,
+      "p_lo": 0.3571,
+      "p_hi": 0.7534,
+      "gain_pct_lo": 1.7856,
+      "gain_pct_hi": 3.7671
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 6.0,
+      "share": 0.1241,
+      "made_observed": 0.6653,
+      "p_lo": 0.2428,
+      "p_hi": 0.7119,
+      "gain_pct_lo": 1.4566,
+      "gain_pct_hi": 4.2714
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 7.0,
+      "share": 0.0838,
+      "made_observed": 0.6654,
+      "p_lo": 0.1602,
+      "p_hi": 0.6839,
+      "gain_pct_lo": 1.1216,
+      "gain_pct_hi": 4.787
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 8.25,
+      "share": 0.0776,
+      "made_observed": 0.6638,
+      "p_lo": 0.1044,
+      "p_hi": 0.6578,
+      "gain_pct_lo": 0.8616,
+      "gain_pct_hi": 5.4265
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 10.0,
+      "share": 0.0484,
+      "made_observed": 0.6599,
+      "p_lo": 0.0529,
+      "p_hi": 0.6413,
+      "gain_pct_lo": 0.5291,
+      "gain_pct_hi": 6.4131
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 12.0,
+      "share": 0.0221,
+      "made_observed": 0.6565,
+      "p_lo": 0.021,
+      "p_hi": 0.6337,
+      "gain_pct_lo": 0.2519,
+      "gain_pct_hi": 7.6045
+    },
+    {
+      "lift": "Deadlift",
+      "jump_mid": 14.0,
+      "share": 0.0099,
+      "made_observed": 0.6545,
+      "p_lo": 0.0065,
+      "p_hi": 0.6303,
+      "gain_pct_lo": 0.0906,
+      "gain_pct_hi": 8.8241
+    }
+  ],
+  "carry_over_deadlift_opener": {
+    "n_entries": 642072,
+    "weight_only": {
+      "early_misses": {
+        "odds_ratio": 0.7466,
+        "ci95": [
+          0.735,
+          0.7584
+        ],
+        "p": 1.119996257062208e-291
+      },
+      "third_misses": {
+        "odds_ratio": 0.8474,
+        "ci95": [
+          0.8335,
+          0.8616
+        ],
+        "p": 1.994591106071852e-85
+      }
+    },
+    "plus_day_form": {
+      "early_misses": {
+        "odds_ratio": 0.7601,
+        "ci95": [
+          0.7478,
+          0.7726
+        ],
+        "p": 8.458153445139355e-239
+      },
+      "third_misses": {
+        "odds_ratio": 0.8186,
+        "ci95": [
+          0.797,
+          0.8407
+        ],
+        "p": 6.958898737341061e-49
+      }
+    }
+  },
+  "deadlift_opener_by_misses": [
+    {
+      "m": 0,
+      "rate": 0.9685,
+      "size": 147913
+    },
+    {
+      "m": 1,
+      "rate": 0.9605,
+      "size": 223908
+    },
+    {
+      "m": 2,
+      "rate": 0.9493,
+      "size": 170692
+    },
+    {
+      "m": 3,
+      "rate": 0.9347,
+      "size": 80011
+    },
+    {
+      "m": 4,
+      "rate": 0.9158,
+      "size": 19548
+    }
+  ],
+  "third_attempt_robustness": [
+    {
+      "lift": "Squat",
+      "All (0.5% grid)": "3.5-4",
+      "Men": "3.5-4.5",
+      "Women": "3.5-4.5",
+      "Raw": "3.5-4.5",
+      "Wraps": "3.5-4.5",
+      "Equipped": "3.5-4.5",
+      "0-1 prior meets": "3.5-4.5",
+      "8+ prior meets": "2.5-3.5",
+      "2020 and later": "3.5-4.5",
+      "IPF affiliates": "3.5-4.5"
+    },
+    {
+      "lift": "Bench",
+      "All (0.5% grid)": "3-3.5",
+      "Men": "2.5-3.5",
+      "Women": "3.5-4.5",
+      "Raw": "3.5-4.5",
+      "Wraps": "3.5-4.5",
+      "Equipped": "2.5-3.5",
+      "0-1 prior meets": "3.5-4.5",
+      "8+ prior meets": "2.5-3.5",
+      "2020 and later": "3.5-4.5",
+      "IPF affiliates": "3.5-4.5"
+    },
+    {
+      "lift": "Deadlift",
+      "All (0.5% grid)": "4-4.5",
+      "Men": "3.5-4.5",
+      "Women": "3.5-4.5",
+      "Raw": "3.5-4.5",
+      "Wraps": "3.5-4.5",
+      "Equipped": "3.5-4.5",
+      "0-1 prior meets": "3.5-4.5",
+      "8+ prior meets": "3.5-4.5",
+      "2020 and later": "3.5-4.5",
+      "IPF affiliates": "3.5-4.5"
+    }
+  ],
+  "bomb_chain_check": [
+    {
+      "lift": "Squat",
+      "n": 149044,
+      "observed": 0.0125,
+      "predicted": 0.0142
+    },
+    {
+      "lift": "Bench",
+      "n": 182959,
+      "observed": 0.0143,
+      "predicted": 0.0156
+    },
+    {
+      "lift": "Deadlift",
+      "n": 158850,
+      "observed": 0.0056,
+      "predicted": 0.0064
+    }
+  ]
+}

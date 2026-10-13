@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Third Attempt — powerlifting attempt odds</title>
+  <meta name="description" content="Pick your opener, second and third attempt with odds from 12 million real powerlifting attempts. Free, open source, built on OpenPowerlifting data.">
+  <meta property="og:title" content="Third Attempt — powerlifting attempt odds">
+  <meta property="og:description" content="Odds for every attempt you could call, from 12 million real ones.">
+  <meta property="og:image" content="https://dek0rta.github.io/third-attempt/og.png">
+  <meta property="og:url" content="https://dek0rta.github.io/third-attempt/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@600;800;900&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="./" aria-label="Third Attempt home">
+      <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+      Third Attempt
+    </a>
+    <nav>
+      <a href="#findings">Findings</a>
+      <a href="paper.pdf">Paper</a>
+      <a href="https://github.com/Dek0rta/third-attempt">Code</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Call your next attempt with 12 million real ones behind you.</h1>
+      <p>Enter your meet so far. For every weight you could call next, see how often lifters in your spot made it. Built on every recorded attempt in OpenPowerlifting since 2000.</p>
+    </section>
+
+    <section class="tool" aria-label="Attempt calculator">
+      <div class="panel today">
+        <h2 class="panel-title">Today</h2>
+        <ol class="attempts" id="attempts"></ol>
+      </div>
+
+      <div class="platform" id="platform" aria-live="polite">
+        <div class="platform-head">
+          <div>
+            <p class="eyebrow" id="platform-label">Opener</p>
+            <p class="big-weight"><span id="platform-weight">—</span><small>kg</small></p>
+          </div>
+          <div class="odds">
+            <p class="eyebrow">Made it</p>
+            <p class="big-odds" id="platform-odds">—</p>
+          </div>
+        </div>
+        <svg class="barbell" id="barbell" viewBox="0 0 1000 220" role="img" aria-label="Barbell loaded to the selected weight"></svg>
+        <p class="platform-note" id="platform-note"></p>
+      </div>
+
+      <div class="panel options">
+        <div class="options-head">
+          <h2 class="panel-title" id="options-title">Pick your opener</h2>
+          <label class="step">Steps
+            <select id="step">
+              <option value="2.5">2.5 kg</option>
+              <option value="1">1 kg</option>
+              <option value="0.5">0.5 kg</option>
+            </select>
+          </label>
+        </div>
+        <div id="options" class="option-list" role="listbox" aria-label="Candidate weights"></div>
+      </div>
+
+      <details class="panel lifter" id="lifter" open>
+        <summary>
+          <h2 class="panel-title">You</h2>
+          <span class="lifter-summary" id="lifter-summary"></span>
+        </summary>
+        <form id="lifter-form" class="lifter-form">
+          <fieldset class="seg" data-key="lift">
+            <legend>Lift</legend>
+            <label><input type="radio" name="lift" value="Squat" checked>Squat</label>
+            <label><input type="radio" name="lift" value="Bench">Bench</label>
+            <label><input type="radio" name="lift" value="Deadlift">Deadlift</label>
+          </fieldset>
+          <label class="field best">Previous competition best in this lift
+            <span class="unit-input"><input type="number" name="best" inputmode="decimal" min="20" max="600" step="0.5" placeholder="e.g. 180"><span>kg</span></span>
+            <small>Your best made lift at any earlier meet, same equipment. Leave empty if this is your first.</small>
+          </label>
+          <fieldset class="seg" data-key="sex">
+            <legend>Category</legend>
+            <label><input type="radio" name="sex" value="M" checked>Men</label>
+            <label><input type="radio" name="sex" value="F">Women</label>
+          </fieldset>
+          <fieldset class="seg" data-key="equip">
+            <legend>Equipment</legend>
+            <label><input type="radio" name="equip" value="Raw" checked>Raw</label>
+            <label><input type="radio" name="equip" value="Wraps">Wraps</label>
+            <label><input type="radio" name="equip" value="Equipped">Equipped</label>
+          </fieldset>
+          <div class="row">
+            <label class="field">Meets before this one
+              <input type="number" name="priorMeets" inputmode="numeric" min="0" max="300" step="1" value="2">
+            </label>
+            <label class="field">Age <span class="opt">optional</span>
+              <input type="number" name="age" inputmode="numeric" min="8" max="99" step="1">
+            </label>
+          </div>
+          <label class="field">Federation
+            <select name="federation" id="federation"><option value="">Not listed</option></select>
+          </label>
+          <div class="checks">
+            <label><input type="checkbox" name="tested">Drug-tested meet</label>
+            <label><input type="checkbox" name="singleLift">Single-lift meet (e.g. bench only)</label>
+          </div>
+        </form>
+      </details>
+    </section>
+
+    <section class="reading">
+      <h2>How to read the numbers</h2>
+      <div class="reading-grid">
+        <p><strong>What a percentage means.</strong> It is the share of lifters in your situation who made that weight: same lift, attempt, weight relative to their best, what happened earlier, category, equipment, experience and federation.</p>
+        <p><strong>Why you can trust the scale.</strong> The model was checked on 2025–26 meets it never saw. When it says 60%, close to 60% of those attempts were made.</p>
+        <p><strong>What it can't tell you.</strong> Lifters pick weights by how the last one felt, and the numbers carry that in. They describe what happened after a call like yours, not what would happen to anyone who forces it. Your coach and your warm-ups know things the data never will.</p>
+      </div>
+    </section>
+
+    <section class="findings" id="findings">
+      <h2>What 12 million attempts say</h2>
+      <div class="finding-grid" id="finding-grid">
+        <article>
+          <p class="stat">46%</p>
+          <h3>Third bench attempts are coin flips</h3>
+          <p>Third attempts were made 64% of the time in the squat, 60% in the deadlift and 46% in the bench.</p>
+        </article>
+        <article>
+          <p class="stat">×5</p>
+          <h3>Heavy openers bomb out more</h3>
+          <p>Opening a bench above your previous best ends with three red lights about 5–6% of the time, against about 1% for openers at 85–92%.</p>
+        </article>
+        <article>
+          <p class="stat">+4%</p>
+          <h3>The safest-bet third attempt</h3>
+          <p>A third attempt 3–4.5% over a made second gives the highest expected gain you can count on in all three lifts, without assuming anything about how lifters pick weights.</p>
+        </article>
+        <article>
+          <p class="stat">−24%</p>
+          <h3>Misses travel</h3>
+          <p>Each miss on an early squat or bench attempt lowers the odds of making the deadlift opener by about a quarter, even after accounting for its weight and the day's form.</p>
+        </article>
+      </div>
+      <p class="paper-link"><a href="paper.pdf">Read the paper</a> for methods, the "jump paradox" and the limits of what this data can show.</p>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <p>Made by Zakhar Sukhanov · <a href="mailto:zexa1993@outlook.com">zexa1993@outlook.com</a> · <a href="https://www.linkedin.com/in/zakhar-sukhanov-1ba2313b6/">LinkedIn</a> · <a href="https://github.com/Dek0rta">GitHub</a>.</p>
+    <p>Data: <a href="https://www.openpowerlifting.org">OpenPowerlifting</a>, public domain, snapshot of 10 Oct 2026: 12,163,164 attempts, 32,150 meets, 420 federations. Free and <a href="https://github.com/Dek0rta/third-attempt">open source</a>. Your inputs never leave this page.</p>
+  </footer>
+</body>
+</html>
