@@ -26,6 +26,7 @@ const PLATES = [
   [0.25, "var(--plate-chrome)", 46, 6],
 ];
 const BAR_AND_COLLARS = 25;
+const EXAMPLE_BEST = 180;
 
 const state = {
   lifter: {
@@ -36,6 +37,7 @@ const state = {
   step: 2.5,
   selected: null,
   custom: false,
+  example: false, // first visit: show a sample lifter until the user enters their own best
 };
 
 const $ = (id) => document.getElementById(id);
@@ -275,6 +277,8 @@ function renderPlatform(n) {
     return;
   }
   $("platform-weight").textContent = fmtKg(w);
+  $("platform-weight").parentElement.classList.toggle("is-empty", !w);
+  $("platform-odds").classList.toggle("is-empty", !w);
   if (!w) {
     $("platform-odds").textContent = "—";
     $("platform-note").textContent = n === 0 ? "Enter your previous competition best, or type an opener, to see your odds." : "Pick a weight.";
@@ -307,6 +311,7 @@ function renderPlatform(n) {
     if (r.rare) note += " Few lifters jump this much, and the ones who do usually felt strong, so treat these odds as optimistic.";
     if (r.maximin) note += " A 3–4.5% third-attempt jump has the best worst-case expected gain in our research.";
   }
+  if (state.example && n === 0) note = `<em>Example: a lifter with a ${EXAMPLE_BEST} kg previous best. Enter yours under “You”.</em> ${note}`;
   $("platform-note").innerHTML = note;
   renderBarbell(w);
 }
@@ -350,6 +355,7 @@ function readForm() {
     tested: data.get("tested") === "on",
     singleLift: data.get("singleLift") === "on",
   });
+  if (state.example) return; // don't remember the sample lifter as the user's profile
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state.lifter)); } catch { /* storage unavailable */ }
 }
 
@@ -375,11 +381,16 @@ function init() {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
     if (saved) Object.assign(state.lifter, saved);
-  } catch { /* storage unavailable */ }
+    else state.example = true;
+  } catch {
+    state.example = true;
+  }
+  if (state.example) state.lifter.best = EXAMPLE_BEST;
   writeForm();
   if (window.matchMedia("(max-width: 900px)").matches && state.lifter.best) $("lifter").open = false;
 
   form.addEventListener("input", (e) => {
+    if (e.target.name === "best") state.example = false;
     readForm();
     if (!state.custom || e.target.name === "lift" || e.target.name === "best") resetSelection();
     render();

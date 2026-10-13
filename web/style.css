@@ -192,6 +192,8 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .big-weight small { font-size: 0.32em; font-weight: 600; margin-left: 6px; color: #9aa3ab; }
 .odds { text-align: right; }
 .big-odds { color: var(--good); }
+.big-weight.is-empty, .big-odds.is-empty { color: #4a5057; }
+.platform-note em { display: block; margin-bottom: 4px; font-style: normal; color: var(--plate-yellow); font-size: 13px; }
 .barbell { display: block; width: 100%; height: auto; margin: 14px 0 6px; }
 .platform-note { margin: 0; min-height: 3em; color: #c9cfd4; font-size: 15px; max-width: 640px; }
 .platform-note strong { color: var(--platform-ink); }
